@@ -1,3 +1,42 @@
+/* FONTS */
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/') format('woff2'),
+        url('../fonts/Inter-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-SemiBold.woff2') format('woff2'),
+        url('../fonts/Inter-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Medium.woff2') format('woff2'),
+        url('../fonts/Inter-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.woff2') format('woff2'),
+        url('../fonts/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 /* CUSTOP PROPS */
 :root {
     --body-bg: #f1f4ff;
@@ -29,8 +68,8 @@ body {
     height: 100%;
     font-size: 16px;
     line-height: 1.5;
-    font-family: 'Arial', sans-serif;
-    background-color: #fff;
+    font-family: 'Inter', 'Arial', sans-serif;
+    background-color: var(--body-bg);
     color: var(--text-color);
 }
 
@@ -42,9 +81,9 @@ img {
 /* CONTAINER */
 .container {
     width: 100%;
-    max-width: 1200px;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: 1192px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -53,4 +92,63 @@ img {
 /* MAIN CONTENT */
 .main-content {
     flex-grow: 1;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.intro-page {
+    display: flex;
+}
+.hero {
+    --text-color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 570px;
+    border-radius: 20px;
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+.hero-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    padding: 55px 60px;
+    background-color: #222;
+    background-image: url(../img/hero-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.hero-badge {
+    padding: 5px 15px;
+    margin-bottom: 60px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 41px;
+    border: 1px solid var(--text-color);
+}
+
+.hero-main-heding {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 36px;
+    line-height: 46px;
+}
+
+.hero-main-text {
+    margin: 0;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.hero-bottom {
+    padding: 28px;
+    font-size: 19px;
+    text-align: center;
+    background-color: var(--green);
 }
